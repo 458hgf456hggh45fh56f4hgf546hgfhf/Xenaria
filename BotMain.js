@@ -50,7 +50,7 @@ client.login(token);
 
 client.on('guildMemberAdd', member => {
 
-  const channel = member.guild.channels.find(ch => ch.name === 'bienvenue');
+  const channel = member.guild.channels.find(ch => ch.name === '💥-bienvenue');
 
   if (!channel) return;
   
