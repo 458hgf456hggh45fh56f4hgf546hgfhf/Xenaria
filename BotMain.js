@@ -7,7 +7,7 @@ const client = new Discord.Client();
 
 const token = process.env.token;
 
-var prefix = "+";
+var prefix = "x!";
 
 
 var commands = "15"; //10
@@ -72,7 +72,7 @@ client.on('guildMemberAdd', member => {
 client.on("ready", () => {
 
 
-    client.user.setGame(""+prefix+"help | #SaveCuBz !");
+    client.user.setGame(""+prefix+"help | Version 1.0");
     
 
 
