@@ -933,14 +933,14 @@ if(message.content.startsWith(prefix + "poll")){
     .addField(thingToEcho, "Répondre avec :white_check_mark: ou :x:")
 
     message.channel.send("**Votre sondage à bien été lancé dans sondages**")
-    message.guild.channels.find("name", "sondages").sendEmbed(embed)
+    message.guild.channels.find("name", "📊-sondages").sendEmbed(embed)
     .then(function (message) {
       message.react("✅")
       message.react("❌")
     }).catch(function() {
     });
     }else{
-      return message.reply("Cette commande est actuellement en test ! Merci de patienter !")
+      return message.reply("Cette commande est que pour l'Administrateur du bot")
 
   }
 
@@ -973,7 +973,7 @@ switch (args[0].toLowerCase()) {
     .addField("Salon", message.channel)
     .addField("Date", message.createdAt)
     .addField("Raison", rreason);
-    let reportschannel = message.guild.channels.find(`name`, "report");
+    let reportschannel = message.guild.channels.find(`name`, "📝-report");
     if(!reportschannel) return message.channel.send("**Le salon 'report' n'existe pas !**");
     message.delete().catch(O_o=>{});
     reportschannel.send(reportEmbed);
